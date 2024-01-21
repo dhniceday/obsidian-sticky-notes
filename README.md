@@ -1,8 +1,8 @@
 # obsidian-sticky-notes
 
-# Sticky Notes for Obsidian
+> Sticky Notes for Obsidian
 
-
+![Sticky Notes](https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/sticky-notes-readme1.png&raw=true)
 
 ## Metadata
 
@@ -36,24 +36,20 @@ CSS is a bit rough (I'm not an expert). I have created that for myself. It blend
 
 ## Examples
 
-`> [!STICKY|yellow left]`
+```
+> [!STICKY|yellow left]
+> Sticky Note
+> This one floats left
+```
 
-`> Sticky Note`
+```
+> [!STICKY|green right title]
+> Sticky Note
+> This one floats right and has its first line bold
+```
 
-`> This one floats left`
-
-
-
-`> [!STICKY|green right title]`
-
-`> Sticky Note`
-
-`> This one floats right and has its first line bold`
-
-
-
-`> [!STICKY|blue center s-45]`
-
-`> Sticky Note`
-
-`> This one is centered and a bit larger`
+```
+> [!STICKY|blue center s-45]
+> Sticky Note
+> This one is centered and a bit larger
+```
