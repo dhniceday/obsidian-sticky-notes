@@ -1,0 +1,197 @@
+/* STICKY NOTES */
+@charset "UTF-8";
+
+:root {
+  --sticky-color-text: #282828;
+
+  --sticky-color-green: #b8bb26;
+  --sticky-color-red: #fb4934;
+  --sticky-color-yellow: #FABD2F;
+  --sticky-color-blue: #83a598;
+  --sticky-color-purple: #d3869b;
+  --sticky-color-aqua: #8ec07c;
+  --sticky-color-orange: #fe8019;
+  --sticky-color-green-transparent: #b8bb26cc;
+  --sticky-color-red-transparent: #fb4934cc;
+  --sticky-color-yellow-transparent: #FABD2Fcc;
+  --sticky-color-blue-transparent: #83a598cc;
+  --sticky-color-purple-transparent: #d3869bcc;
+  --sticky-color-aqua-transparent: #8ec07ccc;
+  --sticky-color-orange-transparent: #fe8019cc;
+
+  --sticky-note-max-width: 600px;
+  --sticky-border-radius: 8px;
+}
+
+.callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=left]):not([data-callout-metadata~=nofloat]) {
+  float: left;
+  margin: unset;
+  margin-right: 8px;
+}
+
+.callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=nofloat]) {
+  float: unset !important;
+  margin-bottom: 20px !important;
+}
+
+.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=right]) {
+  float: right;
+  margin: unset;
+  margin-left: 8px;
+}
+
+.callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=ctr],
+[data-callout-metadata~=center]) {
+  display: block;
+  margin: auto;
+  float: unset;
+}
+
+.callout[data-callout~=sticky] {
+  --callout-icon: sticky-note;
+  background-color: var(--sticky-color) !important;
+  color: var(--sticky-color-text);
+  font-family: var(--sticky-font);
+  font-size: var(--sticky-font-size);
+  max-width: var(--sticky-note-max-width); 
+  margin: auto;
+  display: block;
+  float: unset;
+}
+
+.callout[data-callout~=sticky] { width: 30%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-35]) { width: 35%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-40]) { width: 40%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-45]) { width: 45%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-50]) { width: 50%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-55]) { width: 55%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-60]) { width: 60%; }
+
+
+.callout[data-callout~=sticky] .callout-title { display: none; }
+.callout[data-callout~=sticky] .callout-title-inner { padding-top: 0.25em; }
+.callout[data-callout~=sticky] .callout-content { padding: 10px; }
+
+.callout[data-callout~=sticky] {
+  border-radius: var(--sticky-border-radius) !important;
+  border-width: 1px !important;
+  padding: 0px;
+  > .callout-content > :first-child {
+      margin-top: 0px;
+  }
+  > .callout-content > :last-child {
+      margin-bottom: 0px;
+  }
+}
+
+.callout[data-callout~=sticky] .callout-content strong,
+.callout[data-callout~=sticky] .callout-content em {
+  color: var(--sticky-color-text);
+  text-decoration: none;
+}
+
+.callout[data-callout~=sticky] .callout-content a.internal-link,
+.callout[data-callout~=sticky] .callout-content a.external-link { 
+  color:var(--sticky-color-text); 
+}
+
+.callout[data-callout~=sticky]:is([data-callout-metadata~=green]) { background-color: var(--sticky-color-green-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=red]) { background-color: var(--sticky-color-red-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=yellow]) { background-color: var(--sticky-color-yellow-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=blue]) { background-color: var(--sticky-color-blue-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=purple]) { background-color: var(--sticky-color-purple-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=aqua]) { background-color: var(--sticky-color-aqua-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=orange]) { background-color: var(--sticky-color-orange-transparent) !important; }
+
+.callout[data-callout~=sticky]:is([data-callout-metadata~=green]) mark { background-color: var(--sticky-color-green-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=red]) mark { background-color: var(--sticky-color-red-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=yellow]) mark { background-color: var(--sticky-color-yellow-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=blue]) mark { background-color: var(--sticky-color-blue-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=purple]) mark { background-color: var(--sticky-color-purple-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=aqua]) mark { background-color: var(--sticky-color-aqua-transparent) !important; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=orange]) mark { background-color: var(--sticky-color-orange-transparent) !important; }
+.callout[data-callout~=sticky] .callout-content mark { opacity: 1;}
+
+.callout[data-callout~=sticky]:is([data-callout-metadata~=title]) .callout-content:first-line {
+  font-weight: bold;
+} 
+
+.sticky-zoom .callout[data-callout~=sticky]:hover, .callout[data-callout~=sticky]:focus{
+  box-shadow:10px 10px 7px rgba(40,40,40,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+  opacity: 1;
+  transition: transform 0.5s ease 0s;
+  display: block;
+}
+
+
+/*@settings
+name: Sticky Notes
+id: sticky-notes
+settings:
+  -
+    id: info-text-sticky-notes
+    type: info-text
+    title: Sticky Notes by *Daniel Hansen*
+    description: Derived from *ITS Callout snippet*
+    markdown: true
+  -
+    id: sticky-color
+    title: Sticky Notes color
+    description: Default color for Sticky Notes. Used when not color is specified in markdown.
+    type: variable-color
+    format: hex
+    opacity: true
+    default: '#fabd2fcc'
+    alt-format:
+      -
+        id: sticky-color-rgb
+        format: rgb
+  -
+    id: sticky-font
+    title: Sticky Notes font
+    description: Font used for sticky notes.
+    type: variable-select
+    default: Roboto
+    options:
+      -
+        label: IBM Plex Sans
+        value: IBM Plex Sans
+      -
+        label: IBM Plex Mono
+        value: IBM Plex Mono
+      -
+        label: Roboto
+        value: Roboto
+      -
+        label: Chilanka
+        value: Chilanka
+      -
+        label: Kalam
+        value: Kalam
+      -
+        label: Architects Daughter
+        value: Architects Daughter
+      -
+        label: Edu SA Beginner
+        value: Edu SA Beginner
+      -
+        label: Playpen Sans
+        value: Playpen Sans
+      -
+        label: Shantell Sans
+        value: Shantell Sans
+  -
+    id: sticky-font-size
+    title: Sticky Notes font size
+    description: Size of the Sticky Notes text
+    type: variable-text
+    default: 1.2em
+  -
+    id: sticky-zoom
+    title: Zoom on hover
+    description: Zooms on sticky notes on mouse hover
+    type: class-toggle
+*/
