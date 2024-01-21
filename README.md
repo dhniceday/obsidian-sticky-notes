@@ -2,7 +2,10 @@
 
 > Sticky Notes for Obsidian
 
-![Sticky Notes](https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/sticky-notes-readme1.png&raw=true)
+![Sticky Notes](https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/sticky-notes-readme1.png)
+
+<img src="https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/sticky-notes-readme1.png" alt="Sticky Notes in Obsidian" />
+
 
 ## Metadata
 
