@@ -34,8 +34,6 @@
 
 CSS is a bit rough (I'm not an expert). I have created that for myself. It blends into my own Gruvbox color scheme for the Minimal theme. But all of that can be easily modified in the css.
 
-<img src="https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/style-settings.png" alt="Style Settings for Sticky Notes in Obsidian" />
-
 ## Examples
 
 ```
