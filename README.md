@@ -24,7 +24,7 @@
 
 ## Options in style settings
 
-- Sticky notes default color (in case you don't define any in the callout)
+- Sticky notes colors
 
 - Choose the font (fonts are not incorporated into the css. Need to be downloaded manually. Should all be available on Google Fonts)
 
@@ -37,6 +37,12 @@ CSS is a bit rough (I'm not an expert). I have created that for myself. It blend
 <img src="https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/style-settings.png" alt="Style Settings for Sticky Notes in Obsidian" />
 
 ## Examples
+
+```
+> [!STICKY]
+> The default sticky 
+> (takes default color from Style Settings).
+```
 
 ```
 > [!STICKY|yellow left]
