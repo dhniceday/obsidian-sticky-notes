@@ -26,7 +26,9 @@
 
 - Sticky notes colors
 
-- Choose the font (fonts are not incorporated into the css. Need to be downloaded manually. Should all be available on Google Fonts)
+- Choose the font 
+    - Fonts are incorporated
+    - All fonts are from Google Fonts
 
 - Text size
 
