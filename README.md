@@ -14,6 +14,10 @@
 
 - define if the first row should be bold [title - default is no title]
 
+- use sticky notes as an aside (left or right)
+
+<img src="https://github.com/dhniceday/obsidian-sticky-notes/blob/main/images/sticky-notes-aside.png" alt="Sticky Notes in Obsidian" />
+
 ## In the sticky notes
 
 - text decoration for bold and italic is deactivated
@@ -31,6 +35,8 @@
     - All fonts are from Google Fonts
 
 - Text size
+
+- Offset for asides
 
 - Zoom on hover (still experimental and not that pretty)
 
@@ -60,4 +66,11 @@ CSS is a bit rough (I'm not an expert). I have created that for myself. It blend
 > [!STICKY|blue center s-45]
 > Sticky Note
 > This one is centered and a bit larger
+```
+
+
+```
+> [!STICKY|aside left purple title]
+> Sticky Note
+> This one is put aside, purple with its first line bold
 ```

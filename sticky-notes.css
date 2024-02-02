@@ -1,5 +1,5 @@
 /* STICKY NOTES */
-/* Release v1.2 */
+/* Release v1.3 */
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
 
 :root {  
   --sticky-color-green: #b8bb26cc;
@@ -24,6 +25,12 @@
   --sticky-color-text: #282828;
   --sticky-note-max-width: 600px;
   --sticky-border-radius: 8px;
+}
+
+body {
+  --sticky-width: 30%;
+  --sticky-offset: 16px;
+  --line-width: var(--file-line-width, --line-width);
 }
 
 .callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=left]):not([data-callout-metadata~=nofloat]) {
@@ -62,14 +69,13 @@
   float: unset;
 }
 
-.callout[data-callout~=sticky] { width: 30%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-35]) { width: 35%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-40]) { width: 40%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-45]) { width: 45%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-50]) { width: 50%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-55]) { width: 55%; }
-.callout[data-callout~=sticky]:is([data-callout-metadata~=s-60]) { width: 60%; }
-
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-35]) { --sticky-width: 35%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-40]) { --sticky-width: 40%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-45]) { --sticky-width: 45%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-50]) { --sticky-width: 50%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-55]) { --sticky-width: 55%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-60]) { --sticky-width: 60%; }
+.callout[data-callout~=sticky] { width: var(--sticky-width); }
 
 .callout[data-callout~=sticky] .callout-title { display: none; }
 .callout[data-callout~=sticky] .callout-title-inner { padding-top: 0.25em; }
@@ -127,6 +133,31 @@
   opacity: 1;
   transition: transform 0.5s ease 0s;
   display: block;
+}
+
+/* ===================================================
+   ASIDES
+   =================================================== */
+
+
+:is(.markdown-source-view .cm-callout, div:not([class])):has(> .callout[data-callout-metadata*="aside"]) {
+  position: relative;
+  overflow: visible;
+}
+
+.callout[data-callout-metadata*="aside"] {
+  position: absolute;
+}
+
+.callout[data-callout-metadata~="aside"][data-callout-metadata~="left"],
+.callout[data-callout-metadata~="aside"]:not([data-callout-metadata~="right"]) {
+  left: calc(-1 * (var(--sticky-width) + var(--sticky-offset)));
+  right: calc(100% + var(--sticky-offset));
+}
+
+.callout[data-callout-metadata~="aside"][data-callout-metadata~="right"] {
+  left: calc(var(--file-line-width) + var(--sticky-offset));
+  right: calc(-1 * var(--sticky-width));
 }
 
 /* @settings
@@ -243,6 +274,16 @@ settings:
     description: Size of the Sticky Notes text
     type: variable-text
     default: 1.2em
+  -
+    id: sticky-offset
+    title: Sticky offset (Aside)
+    description: When using Aside, the offset between the sticky and the text
+    type: variable-number-slider
+    default: 12
+    min: 0
+    max: 50
+    step: 1
+    format: px
   -
     id: sticky-zoom
     title: Zoom on hover
