@@ -19,7 +19,8 @@
 - *Optimized Sub-optimal*
 
 
-
+ex.
+```
 > [!STICKY| blue title right s-80] 
 > > Comment #1 
 > > [[CSS stickynotes3.7]]
@@ -89,7 +90,7 @@ text text text
 
 <br><br>
 text ^there was one `<br>` tag for no overlap
-
+```
 
 > Sticky Notes for Obsidian
 
