@@ -68,7 +68,6 @@ CSS is a bit rough (I'm not an expert). I have created that for myself. It blend
 > This one is centered and a bit larger
 ```
 
-
 ```
 > [!STICKY|aside left purple title]
 > Sticky Note
