@@ -1,5 +1,5 @@
 /* STICKY NOTES */
-/* Release v1.3 */
+/* Release v1.4 */
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
@@ -33,16 +33,7 @@ body {
   --line-width: var(--file-line-width, --line-width);
 }
 
-.callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=left]):not([data-callout-metadata~=nofloat]) {
-  float: left;
-  margin: unset;
-  margin-right: 8px;
-}
 
-.callout.callout.callout[data-callout~=sticky]:is([data-callout-metadata~=nofloat]) {
-  float: unset !important;
-  margin-bottom: 20px !important;
-}
 
 .callout.callout[data-callout~=sticky]:is([data-callout-metadata~=right]) {
   float: right;
@@ -67,14 +58,26 @@ body {
   margin: auto;
   display: block;
   float: unset;
+  border: none;
 }
 
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-20]) { --sticky-width: 20%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-25]) { --sticky-width: 25%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-30]) { --sticky-width: 30%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-35]) { --sticky-width: 35%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-40]) { --sticky-width: 40%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-45]) { --sticky-width: 45%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-50]) { --sticky-width: 50%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-55]) { --sticky-width: 55%; }
 .callout[data-callout~=sticky]:is([data-callout-metadata~=s-60]) { --sticky-width: 60%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-65]) { --sticky-width: 65%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-70]) { --sticky-width: 70%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-75]) { --sticky-width: 75%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-80]) { --sticky-width: 80%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-85]) { --sticky-width: 85%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-90]) { --sticky-width: 90%; }
+.callout[data-callout~=sticky]:is([data-callout-metadata~=s-95]) { --sticky-width: 95%; }
+
 .callout[data-callout~=sticky] { width: var(--sticky-width); }
 
 .callout[data-callout~=sticky] .callout-title { display: none; }
@@ -125,16 +128,6 @@ body {
   font-weight: bold;
 } 
 
-.sticky-zoom .callout[data-callout~=sticky]:hover, .callout[data-callout~=sticky]:focus{
-  box-shadow:10px 10px 7px rgba(40,40,40,.7);
-  transform: scale(1.25);
-  position:relative;
-  z-index:5;
-  opacity: 1;
-  transition: transform 0.5s ease 0s;
-  display: block;
-}
-
 /* ===================================================
    ASIDES
    =================================================== */
@@ -159,6 +152,7 @@ body {
   left: calc(var(--file-line-width) + var(--sticky-offset));
   right: calc(-1 * var(--sticky-width));
 }
+
 
 /* @settings
 name: Sticky Notes
@@ -284,9 +278,4 @@ settings:
     max: 50
     step: 1
     format: px
-  -
-    id: sticky-zoom
-    title: Zoom on hover
-    description: Zooms sticky notes on mouse hover (experimental)
-    type: class-toggle
 */
